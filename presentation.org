@@ -1,0 +1,198 @@
+#+TITLE: Research Interests
+#+AUTHOR: Adam J. Jackson
+#+EMAIL: a.j.jackson@physics.org
+
+#+OPTIONS: num:nil toc:nil texht:t :reveal_center
+#+REVEAL_ROOT: reveal.js
+#+REVEAL_EXTRA_CSS: presentation.css
+#+REVEAL_SPEED: fast
+#+REVEAL_TRANS: slide
+#+REVEAL_HLEVEL: 1
+
+** Info
+This presentation is not currently available online
+
+* Timeline
+
+   
+** 2006--2011 Undergraduate MEng Chemical Engineering
+     - University of Bath
+     - Technical review (membranes for biomedical tech)
+     - Research project (oxygen scavenging membranes)
+     - 2009--2010 Industrial placement (surfactants)
+     - Design projects
+
+** 2011--2016 Doctoral Training Centre in Sustainable Chemical Technologies
+    - University of Bath (Depts. of Chemistry and Chem. Eng.)
+    - 2011--2012 MRes: two short projects
+      - Oxidation of GaN
+      - Dissolution of cellulose in ionic liquids
+    - 2012-2016 PhD project: CZTS
+      - Research group of Aron Walsh
+      - Thesis accepted pending minor corrections
+
+** 2016 Research assistant
+   - Same research group as PhD
+   - Method/code development
+   - Supporting students in group
+
+
+* Relevant research
+
+** Oxidation of GaN
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+   - /Ab initio/ study of thermodynamics of oxygen defects in GaN
+   - Defect formation energy from DFT with PBEsol
+   - Temperature effects from harmonic lattice dynamics
+   - Chemical potentials of O_{2}, N_{2} from literature
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+ATTR_HTML: :width 70%
+[[./images/Gan.gif]]
+#+REVEAL_HTML: </div>
+
+** Oxidation of GaN - findings
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+   - Supercell size dependence: band-filling correction for dilute limit
+   - ~1,000,000:1 N_{2} to O_{2} ratio needed to prevent oxidation
+   - Paper published in /Phys. Rev. B/ [[http://dx.doi.org/10.1103/PhysRevB.88.165201][10.1103/PhysRevB.88.165201]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 40%">
+#+ATTR_HTML: :width 100%
+[[./images/prb-contours.png]]
+#+REVEAL_HTML: </div>
+
+
+** CZTS
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+   - Copper zinc tin sulfide
+   - Thin-film absorber layer for earth-abundant PV
+   - p-type "copper-poor" material typically produced
+   - Poor reproducibility between experimental groups
+   - Major concerns are low open-circuit voltage and presence of secondary phases
+#+REVEAL_HTML: </div>
+
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+[[./images/kesterite.png]]
+#+REVEAL_HTML: </div>
+
+
+
+** CZTS
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+   - Investigate relative stability of phases against $T$, $P$
+   - Similar approach to GaN, more materials: /ab initio/ lattice dynamics
+   - Initially looked at decomposition to binaries
+   - → Sensitive to temperature, at low S pressure
+   - Published in /J. Mater. Chem. A/ [[http://dx.doi.org/10.1039/c4ta00892h][10.1039/c4ta00892h]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 40%">
+[[./images/DG_CZTS_SnS_Scragg.png]]
+
+Cu_{2}S + ZnS + SnS + S_{(g)} ⇌ Cu_{2}ZnSnS_{4}
+#+REVEAL_HTML: </div>
+
+** CZTS
+   - Move to include ternary phases
+   - Ternary phase diagrams with "open" sulfur content
+   - Vary chemical potentials with two parameters:
+     - temperature and pressure
+
+** CZTS
+   [[./images/phasediagram_multi.png]]
+
+** CZTS
+
+   - Found very narrow stability region for CZTS without CTS
+   - Presented at conferences
+   - Main finding of PhD thesis
+
+#+ATTR_HTML: :width 50%
+[[./images/ternary_tp.png]]
+
+** Sulfur
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+   - While developing CZTS stability models, found inconsistent treatment of sulfur
+   - Known to consist of a mixture of allotropes
+   - Typically one allotrope is assumed to represent vapour phase
+   - Last model of mixture developed in 1970s, made a lot of assumptions
+#+REVEAL_HTML: </div>
+
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+[[./images/rau.png]]
+
+[[http://dx.doi.org/10.1016/S0021-9614(73)80045-X][Rau et al. (1973)]]
+#+REVEAL_HTML: </div>
+
+
+** Sulfur
+   - Evolutionary algorithm used to generate candidate clusters,
+     compared with literature
+   - Used a selection to populate equilibrium model
+#+ATTR_HTML: :width 80%
+[[./images/S-montage.png]]
+
+
+** Sulfur
+   - Vibrations computed with range of DFT XC functionals
+   - PBE0 frequencies with 96% scale factor provided best fit
+   - Create "universal" chemical potential of sulfur atoms accounting for equilibrium as $f(T,P)$
+   - Paper published in /Chem. Sci./ [[http://dx.doi.org/10.1039/C5SC03088A][10.1039/C5SC03088A]]
+#+ATTR_HTML: :width 65%
+[[./images/mu_contributions.png]]
+
+** High-throughput screening
+   - Work in progress
+   - Supporting code is being developed openly at http://github.com/wmd-group/smact
+   - "Low-fi" chemical screening of arbitrary element combinations
+     - Simple tight-binding models
+     - Materials availability
+     - Electronegativity rules
+     - Radius ratios
+   - Paper and conference talks in preparation
+
+
+* Areas of interest
+
+** Experiment interpretation and prediction
+
+   - Quantitative prediction of Raman and IR results
+     - Phonon-phonon interactions, DFPT and instrument corrections for CZTS
+       - [[http://dx.doi.org/10.1063/1.4917044][10.1063/1.4917044]]
+     - Hybrid DFT pDOS for resonant Raman spectroscopy
+       - Applied to Zn(S,Se) [[http://dx.doi.org/10.1039/C5CP04498G][10.1039/C5CP04498G]]
+   - PV device properties more difficult - but important!
+     - $E_{g}$: Optics vs current/voltage vs V_{OC} vs computation
+     - Device modelling
+
+** Reproducible research & data sharing
+
+   - Computational chemistry is deterministic! No excuses for
+     difficulty reproducing work
+   - Research councils require raw data to be made available
+   - Go one step further by making all analysis available, e.g.
+     http://github.com/wmd-group/sulfur_model
+   - New databases of results are being developed (Materials Project, OQMD...)
+
+
+* Wrapping up
+
+   - Work so far has primarily used GGA/hybrid DFT with supercells
+   - Keen to branch out in both directions
+     - Low-cost forcefield calculations and embedded cluster calculations
+     - Beyond-DFT methods for improved optical modelling
+   - Automation is good...
+     - as long as it is easy to understand
+   - HPC is good...
+     - as long as the results are useful
