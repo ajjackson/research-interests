@@ -10,7 +10,7 @@
 #+REVEAL_HLEVEL: 1
 
 ** Info
-This presentation is not currently available online
+This presentation is available online at http://ajjackson.github.io/research-interests
 
 * Timeline
 
